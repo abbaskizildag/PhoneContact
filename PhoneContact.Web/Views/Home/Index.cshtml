@@ -1,0 +1,28 @@
+﻿@model ContactResponse
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<table>
+    <tr>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Telefon</th>
+    </tr>
+
+    @foreach (var contact in Model.data)
+    {
+        <tr>
+            <td>@contact.Name</td>
+            <td>@contact.Surname</td>
+            <td>@contact.PhoneNumber</td>
+        </tr>
+    }
+
+</table>
